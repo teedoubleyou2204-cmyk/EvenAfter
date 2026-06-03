@@ -53,6 +53,22 @@ templates/
 │   ├── wedding-countdown-series.md            — 3-part carousel (1080×1080)
 │   ├── customization-tips.md                  — Platform-specific guidance
 │   └── social-media-preview.png               — Visual mockup
+├── reception-pack/
+│   ├── menu-card.md                   — 4×6″ elegant menu card
+│   ├── place-card.md                  — 3.5×2″ tent-fold place card
+│   └── table-number.md                — 5×7″ table number easel
+├── signage-pack/
+│   ├── welcome-sign.md                — 16×20″ large welcome sign
+│   ├── bar-menu.md                    — 8×10″ drink menu sign
+│   ├── guestbook-sign.md              — 5×7″ guestbook instruction sign
+│   └── cards-gifts-sign.md            — 5×7″ card/gift direction sign
+├── stationery-expansion/
+│   ├── rsvp-card.md                   — 3.5×5″ RSVP reply card
+│   ├── details-card.md                — 3.5×5″ accommodations/registry card
+│   └── thank-you-card.md              — 5×7″ folded thank-you note
+├── ceremony-essentials/
+│   ├── wedding-program.md             — 5.5×8.5″ bi-fold ceremony program
+│   └── vow-book-cover.md              — 4×6″ vow book cover + template
 └── assets/
     └── style-guide.pdf             — Full brand style guide (print-ready)
 ```

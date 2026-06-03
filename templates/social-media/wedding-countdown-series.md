@@ -162,6 +162,25 @@ A cohesive three-part countdown series building excitement toward the big day. E
 | 2    | #E8C4C4     | #3A3A3A     | #9CAF88        | #E8C4C4      | #3A3A3A      |
 | 3    | #C9A94E     | #FFFFFF     | #C9A94E        | #C9A94E      | #FFFFFF      |
 
+## 🎨 Color Customization
+
+Each countdown post has 5 color elements, all fully customizable.
+
+### Color Swap Mapping (Per Post)
+
+| Element          | Default               | Swap To (Example)              |
+|------------------|-----------------------|---------------------------------|
+| Banner fill      | Sage/Blush/Gold varies | Navy, Terracotta, any color   |
+| Banner text      | White or Charcoal      | Toggle based on fill lightness |
+| Accent color     | Gold or Sage           | Your wedding accent            |
+| CTA button fill  | Matches banner fill    | Same as banner or accent       |
+| CTA text         | White or Charcoal      | Contrast with CTA fill         |
+
+### Quick Step
+1. For each post in the series, click the colored banner → Color → Your chosen hue
+2. If banner is light (Blush), swap banner text & CTA text to Charcoal (#3A3A3A)
+3. Keep the accent color (gold ribbons, dividers) consistent across all 3 posts for unity
+
 ## Customization Notes
 - Post all three at once as a carousel for a single high-impact moment
 - Or post sequentially to build engagement over 3 months
