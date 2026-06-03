@@ -4,7 +4,7 @@ import templatesData from './data/templates.json'
 
 const Header = () => (
   <header className="bg-ivory border-b border-sage/30 py-8 px-4 text-center">
-    <h1 className="font-display text-5xl text-charcoal mb-2">EverAfter Printables</h1>
+    <h1 className="font-display text-5xl text-charcoal mb-2 cursor-pointer" onClick={() => window.location.reload()}>EverAfter Printables</h1>
     <p className="font-body italic text-xl text-sage">Beautifully designed. Effortlessly yours.</p>
   </header>
 )
@@ -54,7 +54,7 @@ const CategorySection = ({ title, templates, onViewDetails }) => (
   </div>
 )
 
-const Modal = ({ template, onClose }) => {
+const DetailsModal = ({ template, onClose, onBuyNow }) => {
   const [content, setContent] = useState('')
   const [loading, setLoading] = useState(true)
 
@@ -106,10 +106,149 @@ const Modal = ({ template, onClose }) => {
           >
             Close
           </button>
-          <button className="px-8 py-2 bg-sage text-white font-modern text-sm hover:bg-sage/90 transition-colors">
-            Buy Now
+          <button 
+            onClick={() => onBuyNow(template)}
+            className="px-8 py-2 bg-sage text-white font-modern text-sm hover:bg-sage/90 transition-colors"
+          >
+            Buy Now - $15
           </button>
         </div>
+      </div>
+    </div>
+  )
+}
+
+const CheckoutModal = ({ template, onClose, onPaymentSuccess }) => {
+  const [paymentMethod, setPaymentMethod] = useState('paypal')
+  const [isProcessing, setIsProcessing] = useState(false)
+
+  const handleSimulatePayment = () => {
+    setIsProcessing(true)
+    setTimeout(() => {
+      setIsProcessing(false)
+      onPaymentSuccess(template)
+    }, 2000)
+  }
+
+  if (!template) return null
+
+  return (
+    <div className="fixed inset-0 bg-charcoal/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div className="bg-white w-full max-w-2xl overflow-hidden flex flex-col shadow-2xl p-8">
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="font-display text-3xl text-charcoal">Checkout</h2>
+          <button onClick={onClose} className="text-charcoal/40 hover:text-charcoal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </div>
+
+        <div className="mb-8 border-b border-sage/20 pb-6">
+          <div className="flex justify-between items-center mb-2">
+            <span className="font-modern text-charcoal/60 uppercase tracking-widest text-xs">Item</span>
+            <span className="font-modern text-charcoal/60 uppercase tracking-widest text-xs">Price</span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="font-display text-xl text-charcoal">{template.title} ({template.category})</span>
+            <span className="font-modern text-xl text-charcoal font-bold">$15.00</span>
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="font-modern text-sm uppercase tracking-widest text-warm-gold mb-4">Payment Method</h3>
+          <div className="grid grid-cols-2 gap-4">
+            <button 
+              onClick={() => setPaymentMethod('paypal')}
+              className={`p-4 border font-modern text-sm transition-all ${paymentMethod === 'paypal' ? 'border-sage bg-ivory/30' : 'border-sage/20 hover:border-sage/50'}`}
+            >
+              PayPal
+            </button>
+            <button 
+              onClick={() => setPaymentMethod('bank')}
+              className={`p-4 border font-modern text-sm transition-all ${paymentMethod === 'bank' ? 'border-sage bg-ivory/30' : 'border-sage/20 hover:border-sage/50'}`}
+            >
+              Bank Transfer
+            </button>
+          </div>
+        </div>
+
+        {paymentMethod === 'paypal' ? (
+          <div className="bg-ivory/30 p-6 rounded-sm text-center mb-8 border border-sage/10">
+            <p className="font-modern text-sm text-charcoal/70 mb-6 italic">Securely pay with your PayPal account or credit card.</p>
+            <button 
+              onClick={handleSimulatePayment}
+              disabled={isProcessing}
+              className="w-full bg-[#0070ba] text-white py-3 rounded-sm font-bold flex items-center justify-center gap-2 hover:bg-[#003087] transition-colors"
+            >
+              {isProcessing ? (
+                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+              ) : (
+                <>
+                  <span className="italic">PayPal</span>
+                  <span>Checkout</span>
+                </>
+              )}
+            </button>
+          </div>
+        ) : (
+          <div className="bg-ivory/30 p-6 rounded-sm mb-8 border border-sage/10">
+            <h4 className="font-display text-lg text-charcoal mb-3">Bank Transfer Details</h4>
+            <div className="font-modern text-sm text-charcoal/70 space-y-2 mb-6">
+              <p><span className="font-bold">Bank Name:</span> EverAfter Global Bank</p>
+              <p><span className="font-bold">Account Name:</span> EverAfter Printables Ltd.</p>
+              <p><span className="font-bold">Account Number:</span> 1234 5678 9012</p>
+              <p><span className="font-bold">Reference:</span> {template.id.toUpperCase()}-ORDER</p>
+              <p className="text-xs mt-4 italic text-sage">* Please send a confirmation once transferred.</p>
+            </div>
+            <button 
+              onClick={handleSimulatePayment}
+              disabled={isProcessing}
+              className="w-full bg-charcoal text-white py-3 rounded-sm font-modern hover:bg-charcoal/90 transition-colors"
+            >
+              {isProcessing ? (
+                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+              ) : "Confirm Transfer Sent"}
+            </button>
+          </div>
+        )}
+
+        <p className="text-center font-modern text-[10px] text-charcoal/40 uppercase tracking-widest">
+          Secure encrypted transaction
+        </p>
+      </div>
+    </div>
+  )
+}
+
+const SuccessModal = ({ template, onClose }) => {
+  return (
+    <div className="fixed inset-0 bg-charcoal/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div className="bg-white w-full max-w-xl text-center p-12 shadow-2xl relative">
+        <div className="w-20 h-20 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9CAF88" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h2 className="font-display text-4xl text-charcoal mb-4">Thank You!</h2>
+        <p className="font-body italic text-xl text-sage mb-8">Your template is ready for download.</p>
+        
+        <div className="bg-ivory/30 p-8 border border-sage/10 mb-8">
+          <h3 className="font-display text-2xl text-charcoal mb-2">{template.title}</h3>
+          <p className="font-modern text-xs text-warm-gold uppercase tracking-widest mb-6">{template.category}</p>
+          <a 
+            href={template.path} 
+            download
+            className="inline-block bg-charcoal text-white px-10 py-4 font-modern tracking-widest uppercase text-sm hover:bg-charcoal/90 transition-all shadow-lg"
+          >
+            Download Markdown
+          </a>
+        </div>
+        
+        <p className="font-modern font-light text-charcoal/60 text-sm mb-8 leading-relaxed">
+          A confirmation email with the download link and editing instructions has also been sent to your inbox.
+        </p>
+        
+        <button 
+          onClick={onClose}
+          className="text-warm-gold font-modern text-sm uppercase tracking-widest hover:text-warm-gold/70 transition-colors"
+        >
+          Return to Store
+        </button>
       </div>
     </div>
   )
@@ -155,20 +294,60 @@ const Footer = () => (
 )
 
 function App() {
+  const [viewState, setViewState] = useState('browse') // 'browse', 'details', 'checkout', 'success'
   const [selectedTemplate, setSelectedTemplate] = useState(null)
+
+  const handleViewDetails = (template) => {
+    setSelectedTemplate(template)
+    setViewState('details')
+  }
+
+  const handleBuyNow = (template) => {
+    setSelectedTemplate(template)
+    setViewState('checkout')
+  }
+
+  const handlePaymentSuccess = (template) => {
+    setSelectedTemplate(template)
+    setViewState('success')
+  }
+
+  const handleClose = () => {
+    setSelectedTemplate(null)
+    setViewState('browse')
+  }
 
   return (
     <div className="min-h-screen bg-ivory/10">
       <Header />
       <main>
         <Hero />
-        <TemplatesList onViewDetails={setSelectedTemplate} />
+        <TemplatesList onViewDetails={handleViewDetails} />
       </main>
       <Footer />
-      <Modal 
-        template={selectedTemplate} 
-        onClose={() => setSelectedTemplate(null)} 
-      />
+      
+      {viewState === 'details' && (
+        <DetailsModal 
+          template={selectedTemplate} 
+          onClose={handleClose} 
+          onBuyNow={handleBuyNow}
+        />
+      )}
+
+      {viewState === 'checkout' && (
+        <CheckoutModal 
+          template={selectedTemplate} 
+          onClose={() => setViewState('details')} 
+          onPaymentSuccess={handlePaymentSuccess}
+        />
+      )}
+
+      {viewState === 'success' && (
+        <SuccessModal 
+          template={selectedTemplate} 
+          onClose={handleClose} 
+        />
+      )}
     </div>
   )
 }
