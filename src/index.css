@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sage: #9CAF88;
+  --color-blush: #E8C4C4;
+  --color-warm-gold: #C9A94E;
+  --color-charcoal: #3A3A3A;
+  --color-ivory: #FDF8F0;
+  
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Cormorant Garamond", Garamond, serif;
+  --font-modern: "Montserrat", Helvetica, sans-serif;
+}
