@@ -78,5 +78,61 @@
     "path": "/templates/checklists/packing-checklist.md",
     "description": "Essential packing lists for the bride, groom, and wedding weekend essentials.",
     "preview": "Packing"
+  },
+  {
+    "id": "engagement-announcement-facebook",
+    "title": "Engagement Banner",
+    "category": "Social Media",
+    "path": "/templates/social-media/engagement-announcement-facebook-banner.md",
+    "description": "Elegant Facebook cover banner with sage and gold accents to announce your engagement.",
+    "preview": "Engagement"
+  },
+  {
+    "id": "save-the-date-instagram-post",
+    "title": "Save the Date Post",
+    "category": "Social Media",
+    "path": "/templates/social-media/save-the-date-instagram-post.md",
+    "description": "Square Instagram post layout with modern typography for your save the date.",
+    "preview": "Save the Date"
+  },
+  {
+    "id": "save-the-date-instagram-story",
+    "title": "Save the Date Story",
+    "category": "Social Media",
+    "path": "/templates/social-media/save-the-date-instagram-story.md",
+    "description": "Vertical Instagram story template for a quick and elegant save the date announcement.",
+    "preview": "Story"
+  },
+  {
+    "id": "wedding-countdown-series",
+    "title": "Countdown Series",
+    "category": "Social Media",
+    "path": "/templates/social-media/wedding-countdown-series.md",
+    "description": "A set of social media posts to build excitement as your wedding day approaches.",
+    "preview": "Countdown"
+  },
+  {
+    "id": "wedding-announcement-instagram-post",
+    "title": "Wedding Announcement Post",
+    "category": "Social Media",
+    "path": "/templates/social-media/wedding-announcement-instagram-post.md",
+    "description": "Formal square announcement post for sharing the big news after the ceremony.",
+    "preview": "Announcement"
+  },
+  {
+    "id": "wedding-announcement-instagram-story",
+    "title": "Wedding Announcement Story",
+    "category": "Social Media",
+    "path": "/templates/social-media/wedding-announcement-instagram-story.md",
+    "description": "Chic vertical story template for real-time wedding day announcements.",
+    "preview": "Story Announcement"
+  },
+  {
+    "id": "social-media-customization-guide",
+    "title": "Customization Tips & Tricks",
+    "category": "Social Media",
+    "path": "/templates/social-media/customization-tips.md",
+    "description": "Essential guide for photo selection, color swapping, and platform-specific best practices.",
+    "preview": "Guide"
   }
 ]

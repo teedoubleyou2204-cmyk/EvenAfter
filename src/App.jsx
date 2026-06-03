@@ -254,12 +254,38 @@ const SuccessModal = ({ template, onClose }) => {
   )
 }
 
+const HowItWorks = () => (
+  <section className="bg-ivory/30 py-20 px-4 border-y border-sage/10">
+    <div className="max-w-4xl mx-auto text-center">
+      <h2 className="font-display text-3xl text-charcoal mb-12">Your Journey to Perfect Stationery</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <div className="text-warm-gold font-display text-4xl mb-4">01</div>
+          <h3 className="font-modern font-bold uppercase tracking-widest text-xs mb-3 text-charcoal">Choose Your Design</h3>
+          <p className="font-modern font-light text-sm text-charcoal/70">Browse our curated collection and select the templates that speak to your wedding style.</p>
+        </div>
+        <div>
+          <div className="text-warm-gold font-display text-4xl mb-4">02</div>
+          <h3 className="font-modern font-bold uppercase tracking-widest text-xs mb-3 text-charcoal">Download Instantly</h3>
+          <p className="font-modern font-light text-sm text-charcoal/70">Complete your purchase and receive immediate access to your high-resolution templates.</p>
+        </div>
+        <div>
+          <div className="text-warm-gold font-display text-4xl mb-4">03</div>
+          <h3 className="font-modern font-bold uppercase tracking-widest text-xs mb-3 text-charcoal">Personalize & Print</h3>
+          <p className="font-modern font-light text-sm text-charcoal/70">Customize every detail in Canva or your favorite editor, then print at home or with a pro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+)
+
 const TemplatesList = ({ onViewDetails }) => {
   const categories = [
     { title: "Wedding Invitations", name: "Invitation" },
     { title: "Wedding Day Essentials", name: "Schedule" },
     { title: "Seating Charts", name: "Seating Chart" },
-    { title: "Planning Tools", name: "Checklist" }
+    { title: "Planning Tools", name: "Checklist" },
+    { title: "Social Media Announcements", name: "Social Media" }
   ]
 
   return (
@@ -322,6 +348,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <HowItWorks />
         <TemplatesList onViewDetails={handleViewDetails} />
       </main>
       <Footer />
