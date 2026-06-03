@@ -134,5 +134,101 @@
     "path": "/templates/social-media/customization-tips.md",
     "description": "Essential guide for photo selection, color swapping, and platform-specific best practices.",
     "preview": "Guide"
+  },
+  {
+    "id": "vow-book-cover",
+    "title": "His & Her Vow Books",
+    "category": "Ceremony Essentials",
+    "path": "/templates/ceremony-essentials/vow-book-cover.md",
+    "description": "Elegant covers for your personal vows, featuring delicate sage floral motifs.",
+    "preview": "Vow Books"
+  },
+  {
+    "id": "wedding-program",
+    "title": "Ceremony Program",
+    "category": "Ceremony Essentials",
+    "path": "/templates/ceremony-essentials/wedding-program.md",
+    "description": "Double-sided program card to guide guests through your beautiful ceremony.",
+    "preview": "Program"
+  },
+  {
+    "id": "menu-card",
+    "title": "Dinner Menu",
+    "category": "Reception Pack",
+    "path": "/templates/reception-pack/menu-card.md",
+    "description": "Sophisticated tall menu card with classic typography and blush accents.",
+    "preview": "Menu"
+  },
+  {
+    "id": "place-card",
+    "title": "Guest Place Cards",
+    "category": "Reception Pack",
+    "path": "/templates/reception-pack/place-card.md",
+    "description": "Minimalist tented cards to guide your loved ones to their seats.",
+    "preview": "Place Cards"
+  },
+  {
+    "id": "table-number",
+    "title": "Table Numbers",
+    "category": "Reception Pack",
+    "path": "/templates/reception-pack/table-number.md",
+    "description": "Bold, clear table numbers with a touch of gold for easy visibility.",
+    "preview": "Numbers"
+  },
+  {
+    "id": "bar-menu",
+    "title": "Signature Cocktails",
+    "category": "Signage Pack",
+    "path": "/templates/signage-pack/bar-menu.md",
+    "description": "Fun and chic bar sign showcasing your wedding's signature drinks.",
+    "preview": "Bar Menu"
+  },
+  {
+    "id": "cards-gifts-sign",
+    "title": "Cards & Gifts Sign",
+    "category": "Signage Pack",
+    "path": "/templates/signage-pack/cards-gifts-sign.md",
+    "description": "Elegant 8x10 sign for your gift table with ornate bordering.",
+    "preview": "Gifts"
+  },
+  {
+    "id": "guestbook-sign",
+    "title": "Guestbook Sign",
+    "category": "Signage Pack",
+    "path": "/templates/signage-pack/guestbook-sign.md",
+    "description": "Sweet and simple sign encouraging guests to leave their well wishes.",
+    "preview": "Guestbook"
+  },
+  {
+    "id": "welcome-sign",
+    "title": "Large Welcome Sign",
+    "category": "Signage Pack",
+    "path": "/templates/signage-pack/welcome-sign.md",
+    "description": "High-impact 24x36 sign to greet your guests as they arrive.",
+    "preview": "Welcome"
+  },
+  {
+    "id": "details-card",
+    "title": "Information Card",
+    "category": "Stationery Expansion",
+    "path": "/templates/stationery-expansion/details-card.md",
+    "description": "Essential wedding details including venue directions and hotel blocks.",
+    "preview": "Details"
+  },
+  {
+    "id": "rsvp-card",
+    "title": "RSVP Card",
+    "category": "Stationery Expansion",
+    "path": "/templates/stationery-expansion/rsvp-card.md",
+    "description": "Coordinating reply card with clear meal selection and date fields.",
+    "preview": "RSVP"
+  },
+  {
+    "id": "thank-you-card",
+    "title": "Thank You Card",
+    "category": "Stationery Expansion",
+    "path": "/templates/stationery-expansion/thank-you-card.md",
+    "description": "Gracious fold-over card for personal notes of appreciation after the day.",
+    "preview": "Thank You"
   }
 ]

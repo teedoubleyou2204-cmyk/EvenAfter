@@ -288,8 +288,12 @@ const HowItWorks = () => (
 const TemplatesList = ({ onViewDetails }) => {
   const categories = [
     { title: "Wedding Invitations", name: "Invitation" },
-    { title: "Wedding Day Essentials", name: "Schedule" },
+    { title: "Stationery Expansion", name: "Stationery Expansion" },
+    { title: "Ceremony Essentials", name: "Ceremony Essentials" },
+    { title: "Reception Pack", name: "Reception Pack" },
+    { title: "Event Signage", name: "Signage Pack" },
     { title: "Seating Charts", name: "Seating Chart" },
+    { title: "Schedules & Timelines", name: "Schedule" },
     { title: "Planning Tools", name: "Checklist" },
     { title: "Social Media Announcements", name: "Social Media" }
   ]
