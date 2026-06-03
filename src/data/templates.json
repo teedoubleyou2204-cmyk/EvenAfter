@@ -1,0 +1,82 @@
+[
+  {
+    "id": "invitation-classic",
+    "title": "Classic Elegance",
+    "category": "Invitation",
+    "path": "/templates/invitations/invitation-classic.md",
+    "description": "Traditional symmetrical layout with an ornate gold border. Ideal for formal weddings.",
+    "preview": "Classic Elegance"
+  },
+  {
+    "id": "invitation-modern",
+    "title": "Modern Asymmetric",
+    "category": "Invitation",
+    "path": "/templates/invitations/invitation-modern.md",
+    "description": "Editorial split layout with a bold sage color block and clean whitespace.",
+    "preview": "Modern Asymmetric"
+  },
+  {
+    "id": "invitation-minimal",
+    "title": "Minimalist Line Art",
+    "category": "Invitation",
+    "path": "/templates/invitations/invitation-minimal.md",
+    "description": "Clean monochrome design with hand-drawn floral corners for a delicate look.",
+    "preview": "Minimalist"
+  },
+  {
+    "id": "wedding-day-schedule",
+    "title": "Wedding Day Timeline",
+    "category": "Schedule",
+    "path": "/templates/schedules/wedding-day-schedule.md",
+    "description": "Scannable time blocks with sage accents to keep your ceremony and reception on track.",
+    "preview": "Timeline"
+  },
+  {
+    "id": "weekend-itinerary",
+    "title": "Weekend Itinerary",
+    "category": "Schedule",
+    "path": "/templates/schedules/weekend-itinerary.md",
+    "description": "Perfect for destination weddings, covering rehearsal dinner to farewell brunch.",
+    "preview": "Itinerary"
+  },
+  {
+    "id": "seating-chart-board",
+    "title": "Display Seating Board",
+    "category": "Seating Chart",
+    "path": "/templates/seating-charts/seating-chart-board.md",
+    "description": "Large 24x36 board layout with a clear table grid for your reception entrance.",
+    "preview": "Board"
+  },
+  {
+    "id": "seating-chart-escort",
+    "title": "Escort Cards",
+    "category": "Seating Chart",
+    "path": "/templates/seating-charts/seating-chart-escort.md",
+    "description": "Individual cards with guest names, table numbers, and meal selection icons.",
+    "preview": "Escort Cards"
+  },
+  {
+    "id": "planning-checklist",
+    "title": "12-Month Planning Timeline",
+    "category": "Checklist",
+    "path": "/templates/checklists/planning-checklist.md",
+    "description": "Step-by-step monthly guide to ensure every detail of your wedding is perfect.",
+    "preview": "Planning"
+  },
+  {
+    "id": "vendor-checklist",
+    "title": "Vendor Coordination",
+    "category": "Checklist",
+    "path": "/templates/checklists/vendor-checklist.md",
+    "description": "Comprehensive grid for tracking vendor contacts, payments, and deliverables.",
+    "preview": "Vendors"
+  },
+  {
+    "id": "packing-checklist",
+    "title": "Packing Checklist",
+    "category": "Checklist",
+    "path": "/templates/checklists/packing-checklist.md",
+    "description": "Essential packing lists for the bride, groom, and wedding weekend essentials.",
+    "preview": "Packing"
+  }
+]
