@@ -13,7 +13,7 @@ const Hero = () => (
   <section className="bg-white py-20 px-4 text-center max-w-4xl mx-auto">
     <h2 className="font-display text-4xl text-charcoal mb-6">Modern Elegance for Your Special Day</h2>
     <p className="font-modern font-light text-charcoal/80 text-lg mb-8 leading-relaxed">
-      Curated wedding stationery templates designed to help you organize and celebrate your love with sophistication and ease.
+      Curated wedding stationery templates designed to help you organize and celebrate your love with sophistication. Fully customizable colors and layouts to match your unique vision.
     </p>
     <div className="flex justify-center gap-4">
       <a href="#templates" className="bg-sage text-white px-8 py-3 rounded-sm font-modern tracking-wide hover:bg-sage/90 transition-colors">
@@ -30,6 +30,12 @@ const TemplateCard = ({ template, onViewDetails }) => (
     </div>
     <span className="font-modern text-xs uppercase tracking-widest text-warm-gold mb-2">{template.category}</span>
     <h3 className="font-display text-xl text-charcoal mb-3">{template.title}</h3>
+    <div className="flex items-center gap-2 mb-4">
+      <div className="w-3 h-3 rounded-full bg-sage"></div>
+      <div className="w-3 h-3 rounded-full bg-blush"></div>
+      <div className="w-3 h-3 rounded-full bg-warm-gold"></div>
+      <span className="text-[10px] font-modern uppercase tracking-tighter text-charcoal/50">Customizable Colors</span>
+    </div>
     <p className="font-modern font-light text-sm text-charcoal/70 mb-6 flex-grow">{template.description}</p>
     <button 
       onClick={() => onViewDetails(template)}
@@ -76,7 +82,7 @@ const DetailsModal = ({ template, onClose, onBuyNow }) => {
       <div className="bg-white w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
         <div className="flex justify-between items-center p-6 border-b border-sage/20 bg-ivory/30">
           <div>
-            <span className="font-modern text-xs uppercase tracking-widest text-warm-gold">{template.category}</span>
+            <span className="font-modern text-xs uppercase tracking-widest text-warm-gold">{template.category} • Fully Customizable Colors</span>
             <h2 className="font-display text-2xl text-charcoal">{template.title}</h2>
           </div>
           <button 
@@ -272,7 +278,7 @@ const HowItWorks = () => (
         <div>
           <div className="text-warm-gold font-display text-4xl mb-4">03</div>
           <h3 className="font-modern font-bold uppercase tracking-widest text-xs mb-3 text-charcoal">Personalize & Print</h3>
-          <p className="font-modern font-light text-sm text-charcoal/70">Customize every detail in Canva or your favorite editor, then print at home or with a pro.</p>
+          <p className="font-modern font-light text-sm text-charcoal/70">Easily swap colors, fonts, and photos in Canva to match your wedding palette perfectly, then print anywhere.</p>
         </div>
       </div>
     </div>
